@@ -8,6 +8,7 @@
     <packaging>pom</packaging>
     
     <modules>
+        <module>libmatthew-java-maven-parent</module>
         <module>libmatthew-java-utils</module>
         <module>libmatthew-java-debug</module>
         <module>libmatthew-java-unix</module>
