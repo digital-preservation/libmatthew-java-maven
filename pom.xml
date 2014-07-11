@@ -3,16 +3,65 @@
     <modelVersion>4.0.0</modelVersion>
     
     <groupId>cx.ath.matthew</groupId>
-    <artifactId>libmatthew-java-maven-aggregator</artifactId>
+    <artifactId>tna-libmatthew-java-maven-aggregator_1.0</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     
     <modules>
-        <module>libmatthew-java-maven-parent</module>
-        <module>libmatthew-java-utils</module>
-        <module>libmatthew-java-debug</module>
-        <module>libmatthew-java-unix</module>
-        <module>libmatthew-jni-unix</module>
+        <module>tna-libmatthew-java-maven-parent</module>
+        <module>tna-libmatthew-java-utils</module>
+        <module>tna-libmatthew-java-debug</module>
+        <module>tna-libmatthew-java-unix</module>
+        <module>tna-libmatthew-jni-unix</module>
     </modules>
+
+   <scm>
+   	<connection>scm:git:ssh://git@dri-dev-scm1.web.local/dri-external-software/libmatthew-java-maven.git</connection> 
+        <developerConnection>scm:git:ssh://git@dri-dev-scm1.web.local:dri-external-software/libmatthew-java-maven.git</developerConnection> 
+        <url>https://dri-dev-scm1.web.local/dri-external-software/libmatthew-java-maven</url>
+   	<tag>HEAD</tag>
+   </scm>
+
+   <profiles>
+   	<profile>
+            <!-- used with mvn -DreleaseProfiles=live-deploy release:perform to release to live -->
+            <id>live-deploy</id>
+            <distributionManagement>
+                <repository>
+                    <id>inf-live-nexus</id>
+                    <name>inf-live-nexus-releases</name>
+                    <url>http://localhost:8089/nexus/content/repositories/releases/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+
+	 <profile>
+            <!-- used with mvn -DreleaseProfiles=uat-deploy release:perform to release to uat -->
+            <id>uat-deploy</id>
+            <distributionManagement>
+                <repository>
+                    <id>inf-uat-nexus</id>
+                    <name>inf-uat-nexus-releases</name>
+                    <url>http://localhost:8089/nexus/content/repositories/releases_uat/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+
+    </profiles>
+
+    <!-- used for Artifactory deployment - ensure settings.xml file has these repository ids in the servers section -->
+    <distributionManagement>
+        <repository>
+            <id>libs-release</id>
+            <name>libs-release</name>
+            <url>http://wb-d-tfs2.web.local:8081/artifactory/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>libs-snapshot</id>
+            <name>libs-snapshot</name>
+            <url>http://wb-d-tfs2.web.local:8081/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
     
+
 </project>

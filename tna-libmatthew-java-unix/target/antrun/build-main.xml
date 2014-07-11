@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <echo>Uncompressing libmatthew-java Java sources...</echo>
+  <untar dest="/home/dev/gitlab/libmatthew-java-maven/tna-libmatthew-java-unix/target/generated-sources/libunix-java" src="/home/dev/gitlab/libmatthew-java-maven/tna-libmatthew-java-unix/target/libmatthew-java/libmatthew-java-0.8.tar.gz" compression="gzip">
+    <patternset>
+      <include name="**/unix/*.java"/>
+    </patternset>
+    <cutdirsmapper dirs="1"/>
+  </untar>
+</target>
+</project>
