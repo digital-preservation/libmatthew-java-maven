@@ -5,7 +5,7 @@
     <parent>
         <groupId>cx.ath.matthew</groupId>
         <artifactId>tna-libmatthew-java-maven-parent</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
         <relativePath>../tna-libmatthew-java-maven-parent</relativePath>
     </parent>
 
@@ -60,9 +60,9 @@
                                 <echo>Uncompressing libmatthew-java C sources...</echo>
                                 <untar compression="gzip" src="${libmatthew-java.downloadDir}/${libmatthew-java.archive}" dest="${libunix-jni.sources}">
                                     <patternset>
-                                        <include name="*/unix-java.c" />
+                                        <include name="*/unix-java.c"/>
                                     </patternset>
-                                    <cutdirsmapper dirs="1" />
+                                    <cutdirsmapper dirs="1"/>
                                 </untar>
                             </tasks>
                         </configuration>
