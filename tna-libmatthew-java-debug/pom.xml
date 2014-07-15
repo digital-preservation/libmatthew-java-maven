@@ -5,7 +5,7 @@
     <parent>
         <groupId>cx.ath.matthew</groupId>
         <artifactId>tna-libmatthew-java-maven-parent</artifactId>
-        <version>1.2</version>
+        <version>1.3-SNAPSHOT</version>
         <relativePath>../tna-libmatthew-java-maven-parent</relativePath>
     </parent>
 
