@@ -4,7 +4,7 @@
     
     <groupId>cx.ath.matthew</groupId>
     <artifactId>tna-libmatthew-java-maven-aggregator_1.0</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.1</version>
     <packaging>pom</packaging>
     
     <modules>
@@ -19,7 +19,7 @@
    	<connection>scm:git:git@dri-dev-scm1.web.local/dri-external-software/libmatthew-java-maven.git</connection> 
         <developerConnection>scm:git:git@dri-dev-scm1.web.local:dri-external-software/libmatthew-java-maven.git</developerConnection> 
         <url>https://dri-dev-scm1.web.local/dri-external-software/libmatthew-java-maven</url>
-   	<tag>HEAD</tag>
+   	<tag>tna-libmatthew-java-maven-aggregator_1.0-1.1</tag>
    </scm>
 
    <profiles>
