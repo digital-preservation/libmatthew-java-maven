@@ -34,20 +34,8 @@
                 </repository>
             </distributionManagement>
         </profile>
-
-	 <profile>
-            <!-- used with mvn -DreleaseProfiles=uat-deploy release:perform to release to uat -->
-            <id>uat-deploy</id>
-            <distributionManagement>
-                <repository>
-                    <id>inf-uat-nexus</id>
-                    <name>inf-uat-nexus-releases</name>
-                    <url>http://localhost:8089/nexus/content/repositories/releases_uat/</url>
-                </repository>
-            </distributionManagement>
-        </profile>
-
-    </profiles>
+    
+  </profiles>
 
     <!-- used for Artifactory deployment - ensure settings.xml file has these repository ids in the servers section -->
     <distributionManagement>
