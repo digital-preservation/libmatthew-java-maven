@@ -16,7 +16,7 @@
     </modules>
 
    <scm>
-   	<connection>scm:git:git@dri-dev-scm1.web.local/dri-external-software/libmatthew-java-maven.git</connection> 
+   	<connection>scm:git:git@dri-dev-scm1.web.local:dri-external-software/libmatthew-java-maven.git</connection> 
         <developerConnection>scm:git:git@dri-dev-scm1.web.local:dri-external-software/libmatthew-java-maven.git</developerConnection> 
         <url>https://dri-dev-scm1.web.local/dri-external-software/libmatthew-java-maven</url>
    	<tag>HEAD</tag>
@@ -34,7 +34,6 @@
                 </repository>
             </distributionManagement>
         </profile>
-    
   </profiles>
 
     <!-- used for Artifactory deployment - ensure settings.xml file has these repository ids in the servers section -->
@@ -50,6 +49,5 @@
             <url>http://wb-d-tfs2.web.local:8081/artifactory/libs-snapshot-local</url>
         </snapshotRepository>
     </distributionManagement>
-    
 
 </project>
